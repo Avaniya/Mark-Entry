@@ -1,0 +1,56 @@
+name=input("Enter Student's Name:")
+roll=input("Enter Student's Roll no.:")
+dpt=input("Enter Student's Department:")
+sec=input("Enter Student's Section:")
+comp=int(input("Enter CS marks out of 100:"))
+math=int(input("Enter Math marks out of 100:"))
+phy=int(input("Enter Physics marks out of 100:"))
+chem=int(input("Enter Chemistry marks out of 100:"))
+eng=int(input("Enter English marks out of 100:"))
+marks=comp+math+phy+chem+eng
+percent=(marks/500)*100
+print("-"*30,"STUDENT'S MARKSHEET","-"*30)
+print("Name             :",name)
+print("Your Roll no.:",roll)
+print("Department  :",dpt)
+print("Section          :",sec)
+print("CS marks             :",comp)
+print("Math marks         :",math)
+print("Physics marks     :",phy)
+print("Chemistry marks:",chem)
+print("English marks     :",eng)
+print("Total marks obtained:",marks," out of 500")
+print("Percentage Obtained  :",percent)
+
+if percent>=80:
+    print("Performance: Outstanding")
+elif percent>=70:
+    print("Performance: Very Good")
+elif percent>=60:
+    print("Performance: Good")
+elif percent>=46:
+    print("Performance: Average")
+else:
+    print("Performace: Needs Improvement")
+
+i=0
+subjects=""
+if  comp<46:
+    i+=1
+    subjects+="CS "
+if math<46:
+    i+=1
+    subjects+="Maths "
+if phy<46:
+    i+=1
+    subjects+="Physics "
+if chem<46:
+    i+=1
+    subjects+="Chemistry "
+if eng<46:
+    i+=1
+    subjects+="English"
+
+print("Number of Subjects Failed:",i)
+print("Failed Subjects                    :",subjects)
+print("-"*95)
